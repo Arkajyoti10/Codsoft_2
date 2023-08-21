@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    double number1,number2;//declare the two variables
+    std :: cout << "Enter the first number";
+
+    cin >> number1;//take 1st number input
+
+    cout << "Enter the second number";
+    cin >> number2;//take 2nd number input
+
+    int choice;
+    cout << "Enter your choice. Press 1- Addition 2- Subtraction 3- Multiplication 4- Division";
+
+    cin >> choice;//input choice according to operation
+
+    switch(choice)
+    {
+        case 1: cout << "ADDITION OF TWO NUMBERS" << endl;
+                cout << "number1 + number2 = " << number1+number2 << endl;//printing addition of two numbers
+                break;
+        case 2: cout << "SUBTRACTION OF TWO NUMBERS" << endl;
+                if(number1>number2)//to check which number is greater
+                {
+                    cout << "number1 - number2 = " << number1-number2 << endl;//printing subtraction
+                }
+                else
+                {
+                    cout << "number2 - number1 = " << number2-number1 << endl;//printing subtraction
+                }
+                break;
+        case 3: cout << "MULTIPLICATION OF TWO NUMBERS" << endl;
+                cout << "number1 * number2 = "<< number1*number2 << endl;
+                break;
+        case 4: cout << "DIVISION OF TWO NUMBERS" << endl;
+                if (number1>number2)
+                {
+                    cout << "number1 / number2 = " << number1/number2 << endl;
+                }
+                else
+                {
+                    cout << "number2 / number1 = " << number2/number1 << endl;
+                }
+                break;
+        default: cout << "INVALID INPUT";
+                 break;
+    }
+    return 0;
+}
